@@ -10,10 +10,13 @@
 
   const btn = document.getElementById("theme-toggle");
   if (btn) {
+    // reflect initial state
+    btn.setAttribute("aria-pressed", String(root.dataset.theme === "dark"));
     btn.addEventListener("click", () => {
       const next = root.dataset.theme === "dark" ? "light" : "dark";
       root.dataset.theme = next;
       localStorage.setItem("theme", next);
+      btn.setAttribute("aria-pressed", String(next === "dark"));
     });
   }
 
