@@ -150,6 +150,7 @@ body {
   border: 1px solid color-mix(in oklab, var(--fg), transparent 85%);
   padding: 6px 8px;
   border-radius: 12px;
+  color: var(--fg);
 }
 
 .hero {
